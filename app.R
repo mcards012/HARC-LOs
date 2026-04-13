@@ -5,10 +5,18 @@ library(DT)
 library('igraph')
 library(networkD3)
 
+
 # allLOs <- readRDS("./data/allLOs.rds")
 # processed <- readRDS("./data/processed.rds")
 # ASLOs <- readRDS("./data/ASLOs.rds")
 LOs <- readRDS("./data/LOs.rds")
+tmp1 <- LOs %>%
+  select(LO_ID, LO_Description_OG)
+tmp2 <- LOs %>%
+  select(LOID, LO_Description)
+names(tmp1) <- names(tmp2)
+descriptions <- rbind(tmp1,tmp2)
+rm(tmp1,tmp2)
 
 ColourScale <- 'd3.scaleOrdinal()
             .domain(["LOID", "Source", "LO_ID"])
@@ -68,7 +76,7 @@ ui <- fluidPage(
                mainPanel(width = 10,
                  fluidRow(
                    column(6,
-                          h4("Select LOs to see new mapped LOs"),
+                          h4("Select LOs"),
                           dataTableOutput("tableOG")
                    ),
                    column(6,
@@ -89,7 +97,7 @@ ui <- fluidPage(
                mainPanel(width = 10,
                          fluidRow(
                                   column(6,
-                                         h4("Select new LOs to see HARC mapped LOs"),
+                                         h4("Select LOs to see HARC mapped LOs"),
                                          dataTableOutput("tableAS")
                                   ),
                                   column(6,
@@ -106,7 +114,18 @@ ui <- fluidPage(
                             selectInput("src2", "Syllabus", choices = src, selected = "AS-Medicine"),
                             h5("Orange: New LOs"),
                             h5("Purple: Original LOs")),
-               mainPanel(forceNetworkOutput("force"))
+               mainPanel(width = 10,
+                         h3("Select a node to see LO description"),
+                         fluidRow(
+                           column(6,
+                             forceNetworkOutput("force")
+                           ),
+                           column(4,
+                                  h5("LO description:"),
+                                  textOutput("desc")
+                           )
+                         )
+                         )
              )
              )
   )
@@ -203,7 +222,17 @@ server <- function(input, output, session) {
     req(input$src2)
     forceNetwork(Links = plt_d3()$links, Nodes = plt_d3()$nodes,
                  Source = 'source', Target = 'target', 
-                 NodeID = 'name', Group = 'group', zoom = T, opacity = 0.8, colourScale = ColourScale)
+                 NodeID = 'name', Group = 'group', zoom = T, opacity = 0.8, colourScale = ColourScale,
+                 clickAction = 'Shiny.onInputChange("id", d.name)')
+  })
+  
+  output$desc <- renderText({ 
+    req(input$id)
+    descriptions %>%
+      unique() %>%
+      filter(LOID == input$id) %>%
+      pull(LO_Description)
+      
   })
 
 }
