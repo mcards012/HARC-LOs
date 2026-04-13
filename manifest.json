@@ -69,6 +69,40 @@
         "Built": "R 4.3.1; ; 2026-04-08 15:34:59 UTC; windows"
       }
     },
+    "Matrix": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "Matrix",
+        "Version": "1.5-4.1",
+        "Date": "2023-05-16",
+        "Priority": "recommended",
+        "Title": "Sparse and Dense Matrix Classes and Methods",
+        "Description": "A rich hierarchy of sparse and dense matrix classes,\n    including general, triangular, symmetric, and diagonal matrices\n    with numeric, logical, or pattern entries.  Efficient methods for\n    operating on such matrices, often wrapping the 'BLAS', 'LAPACK',\n    and 'SuiteSparse' libraries.",
+        "License": "GPL (>= 2) | file LICENCE",
+        "URL": "https://Matrix.R-forge.R-project.org",
+        "BugReports": "https://R-forge.R-project.org/tracker/?atid=294&group_id=61",
+        "Contact": "Matrix-authors@R-project.org",
+        "Authors@R": "c(person(\"Douglas\", \"Bates\", role = \"aut\",\n             comment = c(ORCID = \"0000-0001-8316-9503\"))\n , person(\"Martin\", \"Maechler\", role = c(\"aut\", \"cre\"),\n          email = \"mmaechler+Matrix@gmail.com\",\n          comment = c(ORCID = \"0000-0002-8685-9910\"))\n , person(\"Mikael\", \"Jagan\", role = \"aut\",\n          comment = c(ORCID = \"0000-0002-3542-2938\"))\n , person(\"Timothy A.\", \"Davis\", role = \"ctb\",\n          comment = c(ORCID = \"0000-0001-7614-6899\",\n                      \"SuiteSparse libraries, notably CHOLMOD and AMD\",\n\t              \"collaborators listed in dir(pattern=\\\"^[A-Z]+[.]txt$\\\", full.names=TRUE, system.file(\\\"doc\\\", \\\"SuiteSparse\\\", package=\\\"Matrix\\\"))\"))\n , person(\"Jens\", \"Oehlschlägel\", role = \"ctb\",\n          comment = \"initial nearPD()\")\n , person(\"Jason\", \"Riedy\", role = \"ctb\",\n          comment = c(ORCID = \"0000-0002-4345-4200\",\n                      \"GNU Octave's condest() and onenormest()\",\n \t  \t      \"Copyright: Regents of the University of California\"))\n , person(\"R Core Team\", role = \"ctb\",\n          comment = \"base R's matrix implementation\"))",
+        "Depends": "R (>= 3.5.0), methods",
+        "Imports": "graphics, grid, lattice, stats, utils",
+        "Suggests": "MASS, expm",
+        "Enhances": "MatrixModels, SparseM, graph, igraph, maptools, sfsmisc, sp,\nspdep",
+        "EnhancesNote": "igraph, maptools, sp, spdep for Rd xrefs",
+        "LazyData": "no",
+        "LazyDataNote": "not possible, since we use data/*.R and our S4 classes",
+        "BuildResaveData": "no",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "yes",
+        "Packaged": "2023-05-17 11:35:52 UTC; maechler",
+        "Author": "Douglas Bates [aut] (<https://orcid.org/0000-0001-8316-9503>),\n  Martin Maechler [aut, cre] (<https://orcid.org/0000-0002-8685-9910>),\n  Mikael Jagan [aut] (<https://orcid.org/0000-0002-3542-2938>),\n  Timothy A. Davis [ctb] (<https://orcid.org/0000-0001-7614-6899>,\n    SuiteSparse libraries, notably CHOLMOD and AMD, collaborators\n    listed in dir(pattern=\"^[A-Z]+[.]txt$\", full.names=TRUE,\n    system.file(\"doc\", \"SuiteSparse\", package=\"Matrix\"))),\n  Jens Oehlschlägel [ctb] (initial nearPD()),\n  Jason Riedy [ctb] (<https://orcid.org/0000-0002-4345-4200>, GNU\n    Octave's condest() and onenormest(), Copyright: Regents of the\n    University of California),\n  R Core Team [ctb] (base R's matrix implementation)",
+        "Maintainer": "Martin Maechler <mmaechler+Matrix@gmail.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-05-18 08:02:19 UTC",
+        "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-06-16 07:47:43 UTC; windows",
+        "Archs": "x64"
+      }
+    },
     "R6": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -739,6 +773,42 @@
         "Date/Publication": "2024-03-30 23:50:02 UTC",
         "Built": "R 4.3.3; x86_64-w64-mingw32; 2024-07-15 00:59:50 UTC; windows",
         "Archs": "x64"
+      }
+    },
+    "data.tree": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "data.tree",
+        "Type": "Package",
+        "Title": "General Purpose Hierarchical Data Structure",
+        "Version": "1.2.0",
+        "Language": "en-US",
+        "Date": "2025-08-06",
+        "Authors@R": "c(\n      person(\n        \"Russ\", \"Hyde\",\n        role = c(\"ctb\"),\n        comment = \"improve dependencies\"\n      ),\n      person(\n        \"Chris\", \"Hammill\",\n        role = c(\"ctb\"),\n        comment = \"improve getting\"\n      ),\n      person(\n        \"Facundo\", \"Munoz\",\n        role = c(\"ctb\"),\n        comment = \"improve list conversion\"\n      ),\n      person(\n        \"Markus\", \"Wamser\"\n        , role = c(\"ctb\")\n        , comment = \"fixed some typos\"\n      ),\n      person(\n        \"Pierre\", \"Formont\"\n        , role = c(\"ctb\")\n        , comment = \"additional features\"\n      ),\n      person(\n        \"Kent\", \"Russel\"\n        , role = c(\"ctb\")\n        , comment = \"documentation\"\n      ),\n      person(\n        \"Noam\", \"Ross\"\n        , role = c(\"ctb\")\n        , comment = \"fixes\"\n      ),\n      person(\n        \"Duncan\", \"Garmonsway\"\n        , role = c(\"ctb\")\n        , comment = \"fixes\"\n      ),\n      person(\n        \"Christoph\", \"Glur\"\n        , role = c(\"aut\", \"cre\")\n        , comment = \"R interface\"\n        , email = \"christoph.glur@powerpartners.pro\"\n      )\n    )",
+        "VignetteBuilder": "knitr, rmarkdown",
+        "Imports": "R6, stringi, methods",
+        "Suggests": "Formula, graphics, testthat, knitr, rmarkdown, ape, yaml,\nnetworkD3, jsonlite, treemap, party, partykit, doParallel,\nforeach, htmlwidgets, DiagrammeR (>= 1.0.0), mockery, rpart",
+        "Enhances": "igraph",
+        "Description": "Create tree structures from hierarchical data, and traverse the\n    tree in various orders. Aggregate, cumulate, print, plot, convert to and from\n    data.frame and more. Useful for decision trees, machine learning, finance,\n    conversion from and to JSON, and many other applications.",
+        "License": "GPL (>= 2)",
+        "URL": "https://github.com/gluc/data.tree",
+        "BugReports": "https://github.com/gluc/data.tree/issues",
+        "Depends": "R (>= 3.5)",
+        "RoxygenNote": "7.3.2",
+        "Encoding": "UTF-8",
+        "NeedsCompilation": "no",
+        "Packaged": "2025-08-25 09:55:30 UTC; ChristophGlur",
+        "Author": "Russ Hyde [ctb] (improve dependencies),\n  Chris Hammill [ctb] (improve getting),\n  Facundo Munoz [ctb] (improve list conversion),\n  Markus Wamser [ctb] (fixed some typos),\n  Pierre Formont [ctb] (additional features),\n  Kent Russel [ctb] (documentation),\n  Noam Ross [ctb] (fixes),\n  Duncan Garmonsway [ctb] (fixes),\n  Christoph Glur [aut, cre] (R interface)",
+        "Maintainer": "Christoph Glur <christoph.glur@powerpartners.pro>",
+        "Repository": "CRAN",
+        "Date/Publication": "2025-08-25 11:00:02 UTC",
+        "Built": "R 4.3.1; ; 2026-04-10 09:54:04 UTC; windows",
+        "RemoteType": "standard",
+        "RemotePkgRef": "data.tree",
+        "RemoteRef": "data.tree",
+        "RemoteRepos": "https://cran.rstudio.com",
+        "RemoteSha": "1.2.0"
       }
     },
     "dbplyr": {
@@ -1509,6 +1579,43 @@
         "Built": "R 4.3.3; ; 2024-07-15 02:30:56 UTC; windows"
       }
     },
+    "igraph": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "igraph",
+        "Title": "Network Analysis and Visualization",
+        "Version": "2.1.4",
+        "Authors@R": "c(\n    person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", role = \"aut\",\n           comment = c(ORCID = \"0000-0001-7098-9676\")),\n    person(\"Tamás\", \"Nepusz\", , \"ntamas@gmail.com\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-1451-338X\")),\n    person(\"Vincent\", \"Traag\", role = \"aut\",\n           comment = c(ORCID = \"0000-0003-3170-3879\")),\n    person(\"Szabolcs\", \"Horvát\", , \"szhorvat@gmail.com\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-3100-523X\")),\n    person(\"Fabio\", \"Zanini\", , \"fabio.zanini@unsw.edu.au\", role = \"aut\",\n           comment = c(ORCID = \"0000-0001-7097-8539\")),\n    person(\"Daniel\", \"Noom\", role = \"aut\"),\n    person(\"Kirill\", \"Müller\", , \"kirill@cynkra.com\", role = c(\"aut\", \"cre\"),\n           comment = c(ORCID = \"0000-0002-1416-3412\")),\n    person(\"Maëlle\", \"Salmon\", role = \"ctb\"),\n    person(\"Michael\", \"Antonov\", role = \"ctb\"),\n    person(\"Chan Zuckerberg Initiative\", role = \"fnd\")\n  )",
+        "Description": "Routines for simple graphs and network analysis. It can\n    handle large graphs very well and provides functions for generating\n    random and regular graphs, graph visualization, centrality methods and\n    much more.",
+        "License": "GPL (>= 2)",
+        "URL": "https://r.igraph.org/, https://igraph.org/,\nhttps://igraph.discourse.group/",
+        "BugReports": "https://github.com/igraph/rigraph/issues",
+        "Depends": "methods, R (>= 3.5.0)",
+        "Imports": "cli, graphics, grDevices, lifecycle, magrittr, Matrix,\npkgconfig (>= 2.0.0), rlang, stats, utils, vctrs",
+        "Suggests": "ape (>= 5.7-0.1), callr, decor, digest, igraphdata, knitr,\nrgl (>= 1.3.14), rmarkdown, scales, stats4, tcltk, testthat,\nvdiffr, withr",
+        "Enhances": "graph",
+        "LinkingTo": "cpp11 (>= 0.5.0)",
+        "VignetteBuilder": "knitr",
+        "Config/Needs/build": "roxygen2, devtools, irlba, pkgconfig,\nigraph/igraph.r2cdocs, moodymudskipper/devtag",
+        "Config/Needs/coverage": "covr",
+        "Config/Needs/website": "readr",
+        "Config/testthat/edition": "3",
+        "Config/testthat/parallel": "true",
+        "Config/testthat/start-first": "vs-es, scan, vs-operators, weakref,\nwatts.strogatz.game",
+        "Encoding": "UTF-8",
+        "RoxygenNote": "7.3.2.9000",
+        "SystemRequirements": "libxml2 (optional), glpk (>= 4.57, optional)",
+        "NeedsCompilation": "yes",
+        "Packaged": "2025-01-22 19:28:33 UTC; kirill",
+        "Author": "Gábor Csárdi [aut] (<https://orcid.org/0000-0001-7098-9676>),\n  Tamás Nepusz [aut] (<https://orcid.org/0000-0002-1451-338X>),\n  Vincent Traag [aut] (<https://orcid.org/0000-0003-3170-3879>),\n  Szabolcs Horvát [aut] (<https://orcid.org/0000-0002-3100-523X>),\n  Fabio Zanini [aut] (<https://orcid.org/0000-0001-7097-8539>),\n  Daniel Noom [aut],\n  Kirill Müller [aut, cre] (<https://orcid.org/0000-0002-1416-3412>),\n  Maëlle Salmon [ctb],\n  Michael Antonov [ctb],\n  Chan Zuckerberg Initiative [fnd]",
+        "Maintainer": "Kirill Müller <kirill@cynkra.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2025-01-23 10:20:02 UTC",
+        "Built": "R 4.3.3; x86_64-w64-mingw32; 2025-04-08 08:24:09 UTC; windows",
+        "Archs": "x64"
+      }
+    },
     "isoband": {
       "Source": "CRAN",
       "Repository": "https://cran.rstudio.com",
@@ -1668,6 +1775,36 @@
         "Repository": "CRAN",
         "Date/Publication": "2024-11-27 23:40:02 UTC",
         "Built": "R 4.3.3; x86_64-w64-mingw32; 2025-04-07 01:06:10 UTC; windows",
+        "Archs": "x64"
+      }
+    },
+    "lattice": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "lattice",
+        "Version": "0.21-8",
+        "Date": "2023-04-05",
+        "Priority": "recommended",
+        "Title": "Trellis Graphics for R",
+        "Authors@R": "c(person(\"Deepayan\", \"Sarkar\", role = c(\"aut\", \"cre\"),\n\t            email = \"deepayan.sarkar@r-project.org\",\n\t\t    comment = c(ORCID = \"0000-0003-4107-1553\")),\n              person(\"Felix\", \"Andrews\", role = \"ctb\"),\n\t      person(\"Kevin\", \"Wright\", role = \"ctb\", comment = \"documentation\"),\n\t      person(\"Neil\", \"Klepeis\", role = \"ctb\"),\n\t      person(\"Johan\", \"Larsson\", role = \"ctb\", comment = \"miscellaneous improvements\"),\n              person(\"Zhijian (Jason)\", \"Wen\", role = \"cph\", comment = \"filled contour code\"),\n              person(\"Paul\", \"Murrell\", role = \"ctb\", email = \"paul@stat.auckland.ac.nz\"),\n\t      person(\"Stefan\", \"Eng\", role = \"ctb\", comment = \"violin plot improvements\"),\n\t      person(\"Achim\", \"Zeileis\", role = \"ctb\", comment = \"modern colors\")\n\t      )",
+        "Description": "A powerful and elegant high-level data visualization\n  system inspired by Trellis graphics, with an emphasis on\n  multivariate data. Lattice is sufficient for typical graphics needs,\n  and is also flexible enough to handle most nonstandard requirements.\n  See ?Lattice for an introduction.",
+        "Depends": "R (>= 4.0.0)",
+        "Suggests": "KernSmooth, MASS, latticeExtra, colorspace",
+        "Imports": "grid, grDevices, graphics, stats, utils",
+        "Enhances": "chron",
+        "LazyLoad": "yes",
+        "LazyData": "yes",
+        "License": "GPL (>= 2)",
+        "URL": "https://lattice.r-forge.r-project.org/",
+        "BugReports": "https://github.com/deepayan/lattice/issues",
+        "NeedsCompilation": "yes",
+        "Packaged": "2023-04-05 15:31:40 UTC; deepayan",
+        "Author": "Deepayan Sarkar [aut, cre] (<https://orcid.org/0000-0003-4107-1553>),\n  Felix Andrews [ctb],\n  Kevin Wright [ctb] (documentation),\n  Neil Klepeis [ctb],\n  Johan Larsson [ctb] (miscellaneous improvements),\n  Zhijian (Jason) Wen [cph] (filled contour code),\n  Paul Murrell [ctb],\n  Stefan Eng [ctb] (violin plot improvements),\n  Achim Zeileis [ctb] (modern colors)",
+        "Maintainer": "Deepayan Sarkar <deepayan.sarkar@r-project.org>",
+        "Repository": "CRAN",
+        "Date/Publication": "2023-04-05 17:43:19 UTC",
+        "Built": "R 4.3.1; x86_64-w64-mingw32; 2023-06-16 07:47:21 UTC; windows",
         "Archs": "x64"
       }
     },
@@ -1868,6 +2005,41 @@
         "Repository": "CRAN",
         "Date/Publication": "2023-03-22 13:00:07 UTC",
         "Built": "R 4.3.3; ; 2024-07-15 04:19:06 UTC; windows"
+      }
+    },
+    "networkD3": {
+      "Source": "CRAN",
+      "Repository": "https://cran.rstudio.com",
+      "description": {
+        "Package": "networkD3",
+        "Type": "Package",
+        "Title": "D3 JavaScript Network Graphs from R",
+        "Description": "Creates 'D3' 'JavaScript' network, tree, dendrogram, and Sankey\n    graphs from 'R'.",
+        "Version": "0.4.1",
+        "Date": "2025-04-14",
+        "Authors@R": "c(\n    person(\"J.J.\", \"Allaire\", role = \"aut\"),\n    person(\"Peter\", \"Ellis\", role = \"ctb\"),\n    person(\"Christopher\", \"Gandrud\", email = \"christopher.gandrud@gmail.com\",\n    role = c(\"aut\", \"cre\")),\n    person(\"Kevin\", \"Kuo\", role = \"ctb\"),\n    person(\"B.W.\", \"Lewis\", role = \"ctb\"),\n    person(\"Jonathan\", \"Owen\", role = \"ctb\"),\n    person(\"Kenton\", \"Russell\", role = \"aut\"),\n    person(\"Jennifer\",\"Rogers\", role = \"ctb\"),\n    person(\"Charles\", \"Sese\", role = \"ctb\"),\n    person(\"CJ\", \"Yetman\", email = \"cj@cjyetman.com\", role = \"aut\")\n    )",
+        "URL": "https://christophergandrud.github.io/networkD3/,\nhttps://github.com/christophergandrud/networkD3",
+        "BugReports": "https://github.com/christophergandrud/networkD3/issues",
+        "License": "GPL (>= 3)",
+        "Depends": "R (>= 3.0.0)",
+        "Imports": "data.tree, htmlwidgets (>= 0.3.2), igraph, jsonlite, magrittr",
+        "Suggests": "htmltools (>= 0.2.6), tibble",
+        "Encoding": "UTF-8",
+        "Enhances": "knitr, shiny",
+        "LazyData": "true",
+        "RoxygenNote": "7.3.2",
+        "NeedsCompilation": "no",
+        "Packaged": "2025-04-14 15:48:44 UTC; christophergandrud",
+        "Author": "J.J. Allaire [aut],\n  Peter Ellis [ctb],\n  Christopher Gandrud [aut, cre],\n  Kevin Kuo [ctb],\n  B.W. Lewis [ctb],\n  Jonathan Owen [ctb],\n  Kenton Russell [aut],\n  Jennifer Rogers [ctb],\n  Charles Sese [ctb],\n  CJ Yetman [aut]",
+        "Maintainer": "Christopher Gandrud <christopher.gandrud@gmail.com>",
+        "Repository": "CRAN",
+        "Date/Publication": "2025-04-14 16:20:02 UTC",
+        "Built": "R 4.3.1; ; 2026-04-10 09:54:10 UTC; windows",
+        "RemoteType": "standard",
+        "RemotePkgRef": "networkD3",
+        "RemoteRef": "networkD3",
+        "RemoteRepos": "https://cran.rstudio.com",
+        "RemoteSha": "0.4.1"
       }
     },
     "openssl": {
@@ -3247,7 +3419,7 @@
   },
   "files": {
     "app.R": {
-      "checksum": "999899bcc7812570f7707e00387c79c4"
+      "checksum": "8c1b1333c7bdbfd6331fc627fcad64e8"
     },
     "data/allLOs.rds": {
       "checksum": "ecaef9f5520ac5f3cc62e2b53b4dcbcb"
